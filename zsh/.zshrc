@@ -8,7 +8,7 @@
 
 alias ll='ls -alF'
 alias vi='vim'
-alias ls='lsd'
+# alias ls='lsd'
 
 eval $(thefuck --alias)
 
@@ -141,6 +141,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -l --blocks name,permission,siz
 # 使用bat为预览文件内容着色(系统先预装bat)
 zstyle ':fzf-tab:complete:ls:*' fzf-preview '[ -f "$realpath" ] && bat --color=always $realpath || lsd -l --blocks name,permission,size,date --color=always --icon=always $realpath'
 
+
+
+# -------------------------------------
+#			其他配置
+# -------------------------------------
+
+
+alias ls='lsd'
 
 
 # source .profile
