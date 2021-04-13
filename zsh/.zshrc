@@ -114,7 +114,7 @@ zinit snippet OMZ::lib/theme-and-appearance.zsh
 # -------------------------------------------
 #				OMG Theme
 # -------------------------------------------
-zinit snippet OMZT::ys
+# zinit snippet OMZT::ys
 # zinit snippet OMZT::muse
 # zinit snippet OMZT::robbyrussell
 # zinit snippet OMZT::steeef
@@ -129,26 +129,26 @@ zinit snippet OMZT::ys
 # zinit light ChesterYue/ohmyzsh-theme-passion
 
 # alien theme
-# zinit light eendroroy/alien 
+zinit light eendroroy/alien 
 # alien theme 设置
-# export ALIEN_THEME="gruvbox"
-# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S 
-# export ALIEN_SECTIONS_LEFT=(
-  # exit
-  # battery
-  # user
-  # path
-  # vcs_branch:async
-  # vcs_status:async
-  # vcs_dirty:async
-  # newline
-  # ssh
-  # venv
-  # prompt
-# )
-# export ALIEN_SECTIONS_RIGHT=(
-  # time
-# )
+export ALIEN_THEME="gruvbox"
+export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S 
+export ALIEN_SECTIONS_LEFT=(
+  exit
+  battery
+  user
+  path
+  vcs_branch:async
+  vcs_status:async
+  vcs_dirty:async
+  newline
+  ssh
+  venv
+  prompt
+)
+export ALIEN_SECTIONS_RIGHT=(
+  time
+)
 
 # alien-minimal theme
 # zinit light eendroroy/alien-minimal
