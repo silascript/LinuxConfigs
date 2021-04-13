@@ -86,10 +86,16 @@ zinit light paulirish/git-open
 zinit snippet OMZL::git.zsh
 # oh-my-zsh 补全插件 忽略大小写、高亮候选项
 zinit snippet OMZ::lib/completion.zsh
+# 压缩解压相关插件
+# zinit snippet OMZ::plugins/extract
+
 
 # 跟theme与样式相关
 # 必须加载，不然OMZ的theme不生效
 zinit snippet OMZ::lib/theme-and-appearance.zsh
+
+# OMZ plugins
+# zinit snippet OMZL::virtualenv
 
 # -----------------------------------------
 #					Themes
@@ -104,15 +110,52 @@ zinit snippet OMZ::lib/theme-and-appearance.zsh
 # zinit light sindresorhus/pure
 
 
-# zeta-zsh-theme 
+
+# -------------------------------------------
+#				OMG Theme
+# -------------------------------------------
+zinit snippet OMZT::ys
+# zinit snippet OMZT::muse
+# zinit snippet OMZT::robbyrussell
+# zinit snippet OMZT::steeef
+# zinit snippet OMZT::af-magic
+
+
+# OMG EXtern Themes
+# zinit light Daivasmara/daivasmara.zsh-theme
+
 # zinit light skylerlee/zeta-zsh-theme
 
-# OMG Theme
- zinit snippet OMZT::ys
- # zinit snippet OMZT::muse
+# zinit light ChesterYue/ohmyzsh-theme-passion
 
-# ZSH_THEME="zeta"
- autoload -Uz promptinit && promptinit
+# alien theme
+# zinit light eendroroy/alien 
+# alien theme 设置
+# export ALIEN_THEME="gruvbox"
+# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S 
+# export ALIEN_SECTIONS_LEFT=(
+  # exit
+  # battery
+  # user
+  # path
+  # vcs_branch:async
+  # vcs_status:async
+  # vcs_dirty:async
+  # newline
+  # ssh
+  # venv
+  # prompt
+# )
+# export ALIEN_SECTIONS_RIGHT=(
+  # time
+# )
+
+# alien-minimal theme
+# zinit light eendroroy/alien-minimal
+# alien-minimal theme 设置
+# export AM_VI_PROMPT_POS=left_start
+
+# autoload -Uz promptinit && promptinit
 
 # ---------------------------------------------------
 #					插件配置
@@ -147,7 +190,7 @@ zstyle ':fzf-tab:complete:ls:*' fzf-preview '[ -f "$realpath" ] && bat --color=a
 #			其他配置
 # -------------------------------------
 
-
+# 使用lsd代替ls命令
 alias ls='lsd'
 
 
