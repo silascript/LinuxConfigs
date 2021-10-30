@@ -122,6 +122,14 @@ zinit snippet OMZ::lib/theme-and-appearance.zsh
 
 
 # OMG EXtern Themes
+# zinit light jackharrisonsherlock/common
+
+# zinit light joshjon/bliss-zsh
+
+# zinit light LasaleFamine/phi-zsh-theme
+
+zinit light sfabrizio/ozono-zsh-theme
+
 # zinit light Daivasmara/daivasmara.zsh-theme
 
 # zinit light skylerlee/zeta-zsh-theme
@@ -129,26 +137,26 @@ zinit snippet OMZ::lib/theme-and-appearance.zsh
 # zinit light ChesterYue/ohmyzsh-theme-passion
 
 # alien theme
-zinit light eendroroy/alien 
+# zinit light eendroroy/alien 
 # alien theme 设置
-export ALIEN_THEME="gruvbox"
-export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S 
-export ALIEN_SECTIONS_LEFT=(
-  exit
-  battery
-  user
-  path
-  vcs_branch:async
-  vcs_status:async
-  vcs_dirty:async
-  newline
-  ssh
-  venv
-  prompt
-)
-export ALIEN_SECTIONS_RIGHT=(
-  time
-)
+# export ALIEN_THEME="gruvbox"
+# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S 
+# export ALIEN_SECTIONS_LEFT=(
+  # exit
+  # battery
+  # user
+  # path
+  # vcs_branch:async
+  # vcs_status:async
+  # vcs_dirty:async
+  # newline
+  # ssh
+  # venv
+  # prompt
+# )
+# export ALIEN_SECTIONS_RIGHT=(
+  # time
+# )
 
 # alien-minimal theme
 # zinit light eendroroy/alien-minimal
@@ -200,3 +208,6 @@ source ~/.bash_profile
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
