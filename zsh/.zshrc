@@ -22,6 +22,11 @@ eval $(thefuck --alias)
 # ----------------------------------------------
 #					zinit
 # ----------------------------------------------
+
+# export ZINIT_HOME="$HOME/.zinit/bin/"
+
+# source "$ZINIT_HOME/zinit.zsh"
+
 source ~/.zinit/bin/zinit.zsh
 
 
@@ -29,11 +34,11 @@ source ~/.zinit/bin/zinit.zsh
 # highlighting
 zinit ice lucid wait='0' atinit='zpcompinit'
 # zinit ice lucid wait='0' atinit"zicompinit; zicdreplay"
-zinit light zdharma/fast-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 
 # 输入历史搜索
-zinit load zdharma/history-search-multi-word
+zinit load zdharma-continuum/history-search-multi-word
 
 # autosuggestions
 # zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
