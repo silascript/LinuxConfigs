@@ -33,3 +33,4 @@ export PS1="\u@\h \w > "
 
 # conda
 
+. "$HOME/.cargo/env"
