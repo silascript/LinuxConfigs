@@ -16,7 +16,7 @@ function docker_ipv4_allcontainers(){
 
 # 查询 Docker 所有容器已指派的端口号
 function docker_ports_allcontainers(){
-	docker inspect --format='{{range $conf := .HostConfig.PortBindings}}{{(index $conf 0).HostPort}} {{end}}' $(docker ps -aq)
+	docker inspect --format='{{.Name}}: {{range $conf := .HostConfig.PortBindings}}{{(index $conf 0).HostPort}} {{end}}' $(docker ps -aq)
 }
 
 
