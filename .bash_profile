@@ -19,7 +19,7 @@ source ~/.profile
 	# docker inspect --format='{{.Name}}: {{range $conf := .HostConfig.PortBindings}}{{(index $conf 0).HostPort}} {{end}}' $(docker ps -aq)
 # }
 
-source ./docker_info.sh
+source ~/docker_info.sh
 
 
 
