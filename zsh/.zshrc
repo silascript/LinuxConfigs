@@ -6,8 +6,11 @@
 # fi
 
 
-alias ll='ls -alF'
+# alias ll='ls -alF'
+alias ll='ls -al'
 alias vi='vim'
+
+# 使用lsd代替ls命令
 # alias ls='lsd'
 
 eval $(thefuck --alias)
@@ -34,16 +37,11 @@ source ~/.zinit/bin/zinit.zsh
 # highlighting
 zinit ice lucid wait='0' atinit='zpcompinit'
 # zinit ice lucid wait='0' atinit"zicompinit; zicdreplay"
-zinit light zdharma-continuum/fast-syntax-highlighting
 
 
 # 输入历史搜索
 zinit load zdharma-continuum/history-search-multi-word
 
-# autosuggestions
-# zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
-zinit ice lucid wait="0" 
-zinit light zsh-users/zsh-autosuggestions
 
 # 补全
 # zinit ice lucid wait='0'
@@ -54,6 +52,15 @@ zinit light zsh-users/zsh-autosuggestions
 # 可代替zsh-completions
 # 可显示候选菜单
 zinit light Aloxaf/fzf-tab
+
+
+# autosuggestions
+# zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
+zinit ice lucid wait="0" 
+zinit light zsh-users/zsh-autosuggestions
+
+# 语法高亮
+zinit light zdharma-continuum/fast-syntax-highlighting
 
 
 # 快速目录跳转
@@ -191,12 +198,21 @@ zstyle ":plugin:history-search-multi-word" active "bg=blue"
 # fzf-tab配置
 # zstyle ':completion:complete:*:options' sort false
 
+
 # fzf-tab 预览设置(右侧显示候选项所在目录或文件内容)
 # 使用lsd 为预览目录着色(系统先预装lsd)
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -l --blocks name,permission,size,date --color=always --icon=always $realpath'
-# 使用bat为预览文件内容着色(系统先预装bat)
-zstyle ':fzf-tab:complete:ls:*' fzf-preview '[ -f "$realpath" ] && bat --color=always $realpath || lsd -l --blocks name,permission,size,date --color=always --icon=always $realpath'
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview '[ -f "$realpath" ] && bat --color=always $realpath'
 
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -l --blocks name,permission,size,date --color=always --icon=always $realpath'
+
+# 使用 exa 预览
+zstyle ':fzf-tab:complete:(cd|ll|ls|exa):*' fzf-preview 'exa -a1 --color=always $realpath'
+
+# zstyle ':fzf-tab:complete:(ll|ls|exa):*' fzf-preview 'exa -1 --color=always $realpath'
+
+# zstyle ':fzf-tab:complete:(cd|exa|ls|ll):*' fzf-preview '[ -f "$realpath" ] && bat --theme=gruvbox-dark --color=always || exa -1 --color=always'
+
+# zstyle ':fzf-tab:complete:(cd|exa|ls|ll):*' fzf-preview 'exa -1 --color=always && bat --theme=gruvbox-dark --color=always '
 
 
 # -------------------------------------
@@ -204,7 +220,10 @@ zstyle ':fzf-tab:complete:ls:*' fzf-preview '[ -f "$realpath" ] && bat --color=a
 # -------------------------------------
 
 # 使用lsd代替ls命令
-alias ls='lsd'
+# alias ls='lsd'
+
+# 使用exa代替ls命令
+alias ls='exa --icons'
 
 
 # source .profile
@@ -216,3 +235,4 @@ source ~/.bash_profile
 
 
 
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
