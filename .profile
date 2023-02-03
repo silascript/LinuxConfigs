@@ -1,5 +1,12 @@
 
 
+# ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+ibus-daemon -d -x
+
+
 # Nodejs
 #export NODE_HOME=/opt/NodeJS/node-v14
 export NODE_HOME=/opt/NodeJS/node-v16
@@ -48,8 +55,15 @@ export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 
 
+
+# maven
+# MAVEN_HOME=~/.sdkman/candidates/maven/current
+# PATH=$PATH:$MAVEN_HOME/bin
+# export MAVEN_HOME PATH
+
 # vscode 
 export PATH=$PATH:/opt/VSCode/
 
 # komodo edit
 export PATH=$PATH:/opt/KomodoEdit/bin
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
