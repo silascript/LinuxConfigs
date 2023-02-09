@@ -5,8 +5,10 @@
 	 ; insteadof = https://github.com/
  ; [url "https://hub.gitfast.tk/"]
 	  ; insteadOf = https://github.com/
- [url "https://hub.fastgit.xyz/"]
-	  insteadOf = https://github.com/
+ ; [url "https://hub.fastgit.xyz/"]
+	  ; insteadOf = https://github.com/
+  [url "https://hub.nuaa.cf/"]
+	   insteadOf = https://github.com/
  ; [url "https://gitclone.com/github.com/"]
 	  ; insteadOf = https://github.com/
  ; [url "https://hub.fastgit.org/"]
@@ -14,3 +16,5 @@
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main
