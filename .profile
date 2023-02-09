@@ -9,10 +9,11 @@ ibus-daemon -d -x
 
 # Nodejs
 #export NODE_HOME=/opt/NodeJS/node-v14
-export NODE_HOME=/opt/NodeJS/node-v16
+# export NODE_HOME=/opt/NodeJS/node-v16
+export NODE_HOME=/opt/NodeJS/node-v18
 # export NODE_PATH="$HOME/nodejs/node_global/bin:$NODE_HOME/bin"
 export NODE_PATH="$HOME/nodejs/node_global/bin"
-export PATH=$PATH:$NODE_HOME/bin:$NODE_PATH
+export PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
 # Golang
 # export GO111MODULE=off
