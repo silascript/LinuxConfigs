@@ -227,7 +227,8 @@ alias ls='exa --icons'
 
 
 # source .profile
-source ~/.bash_profile
+source ~/docker_info.sh
+# source ~/.bash_profile
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

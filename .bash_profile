@@ -1,5 +1,5 @@
 
-source ~/.profile
+# source ~/.profile
 
 
 # . "$HOME/.cargo/env"

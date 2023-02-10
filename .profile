@@ -66,5 +66,5 @@ export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
 export PATH=$PATH:/opt/VSCode/
 
 # komodo edit
-export PATH=$PATH:/opt/KomodoEdit/bin
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+# export PATH=$PATH:/opt/KomodoEdit/bin
+# ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
