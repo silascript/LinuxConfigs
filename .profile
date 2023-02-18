@@ -21,7 +21,8 @@ export PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 # export GO111MODULE=auto
 # export GOPROXY=https://mirrors.aliyun.com/goproxy/
 # export GOPROXY=https://goproxy.io
-export PATH=$PATH:/opt/golang/bin
+export GOROOT=/opt/golang
+export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # MySQL
