@@ -33,8 +33,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 # sdkman
 export SDKMAN_DIR="/home/silascript/.sdkman"
-[[ -s "/home/silascript/.sdkman/bin/sdkman-init.sh" ]] && source "/home/silascript/.sdkman/bin/sdkman-init.sh"
-
+# [[ -s "/home/silascript/.sdkman/bin/sdkman-init.sh" ]] && source "/home/silascript/.sdkman/bin/sdkman-init.sh"
 
 # Rust
 # export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
@@ -69,3 +68,6 @@ export PATH=$PATH:/opt/VSCode/
 # komodo edit
 # export PATH=$PATH:/opt/KomodoEdit/bin
 # ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+
+
