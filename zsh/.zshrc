@@ -227,7 +227,7 @@ alias ls='exa --icons'
 
 
 # source .profile
-source ~/docker_info.sh
+source ~/docker_sh/docker_info.sh
 # source ~/.bash_profile
 
 # sdkman
