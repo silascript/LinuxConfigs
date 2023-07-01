@@ -9,8 +9,14 @@
 	  ; insteadOf = https://github.com/
 ; [url "https://hub.nuaa.cf/"]
    ; insteadOf = https://github.com/
-[url "https://kgithub.com/"]
-   insteadOf = https://github.com/
+; [url "https://kgithub.com/"]
+   ; insteadof = https://github.com/
+; [url "https://hub.yzuu.cf/"]
+   ; insteadof = https://github.com/
+; [url "https://hub.fgit.ml/"]
+   ; insteadof = https://github.com/
+[url "https://hub.njuu.cf/"]
+   insteadof = https://github.com/
  ; [url "https://gitclone.com/github.com/"]
 	  ; insteadOf = https://github.com/
  ; [url "https://hub.fastgit.org/"]
