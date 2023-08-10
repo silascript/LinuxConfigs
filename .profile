@@ -63,7 +63,8 @@ export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin
 # export MAVEN_HOME PATH
 
 # vscode 
-export PATH=$PATH:/opt/VSCode/
+# export PATH=$PATH:/opt/VSCode/
+export PATH=$PATH:/opt/VSCode/bin
 
 # komodo edit
 # export PATH=$PATH:/opt/KomodoEdit/bin
