@@ -1,26 +1,14 @@
 [user]
 	name = silascript
 	email = cansaiji@gmail.com
-; [url "https://github.com.cnpmjs.org/"]
-	 ; insteadof = https://github.com/
- ; [url "https://hub.gitfast.tk/"]
-	  ; insteadOf = https://github.com/
- ; [url "https://hub.fastgit.xyz/"]
-	  ; insteadOf = https://github.com/
-; [url "https://hub.nuaa.cf/"]
-   ; insteadOf = https://github.com/
-; [url "https://kgithub.com/"]
-   ; insteadof = https://github.com/
-; [url "https://hub.yzuu.cf/"]
-   ; insteadof = https://github.com/
-; [url "https://hub.fgit.ml/"]
-   ; insteadof = https://github.com/
 [url "https://hub.njuu.cf/"]
-   insteadof = https://github.com/
- ; [url "https://gitclone.com/github.com/"]
-	  ; insteadOf = https://github.com/
- ; [url "https://hub.fastgit.org/"]
-	  ; insteadOf = https://github.com/
+	insteadOf = https://github.com/
+; [url "https://hub.nuaa.cf/"]
+	; insteadOf = https://github.com/
+; [url "https://kgithub.com/"]
+	; insteadOf = https://github.com/
+; [url "https://hub.yzuu.cf/"]
+	; insteadOf = https://github.com/
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
