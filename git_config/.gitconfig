@@ -1,16 +1,17 @@
 [user]
 	name = silascript
-	email = cansaiji@gmail.com
-[url "https://hub.njuu.cf/"]
+	email = silascript@outlook.com
+#[url "https://kgithub.com/"]
+#	insteadOf = https://github.com/
+[url "https://hub.nuaa.cf/"]
 	insteadOf = https://github.com/
-; [url "https://hub.nuaa.cf/"]
-	; insteadOf = https://github.com/
-; [url "https://kgithub.com/"]
-	; insteadOf = https://github.com/
-; [url "https://hub.yzuu.cf/"]
-	; insteadOf = https://github.com/
+#[url "https://hub.yzuu.cf/"]
+#	insteadOf = https://github.com/
+#[url "https://hub.njuu.cf/"]
+#	insteadOf = https://github.com/
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
-[init]
-	defaultBranch = main
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
