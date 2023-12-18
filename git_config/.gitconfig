@@ -2,13 +2,15 @@
 	name = silascript
 	email = silascript@outlook.com
 #[url "https://kgithub.com/"]
-#	insteadOf = https://github.com/
+	# insteadOf = https://github.com/
+#[url "https://kkgithub.com/"]
+	# insteadOf = https://github.com/
 [url "https://hub.nuaa.cf/"]
 	insteadOf = https://github.com/
 #[url "https://hub.yzuu.cf/"]
 #	insteadOf = https://github.com/
-#[url "https://hub.njuu.cf/"]
-#	insteadOf = https://github.com/
+# [url "https://hub.njuu.cf/"]
+	# insteadOf = https://github.com/
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
