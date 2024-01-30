@@ -9,11 +9,16 @@
   # source /usr/share/zsh/manjaro-zsh-prompt
 # fi
 
+# --------------------------------------------------------------------- #
 
 alias ll="ls -alF"
 
 
 # source ~/.profile
+
+# --------------------------------------------------------------------- #
+#								 zinit
+# --------------------------------------------------------------------- #
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -40,16 +45,18 @@ zinit light-mode for \
 
 
 
-# -------------------------------------------- 
+# --------------------------------------------------------------------- #
 
-# -----------------------------------------
-#				其他框架插件
-# -----------------------------------------
+
+
+# --------------------------------------------------------------------- #
+#							其他框架插件
+# --------------------------------------------------------------------- #
 
 # 加载oh-my-zsh 插件
 # git lib
 zinit snippet OMZL::git.zsh
-# zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
 # oh-my-zsh 补全插件 忽略大小写、高亮候选项
 zinit snippet OMZ::lib/completion.zsh
 
@@ -63,7 +70,9 @@ zinit ice lucid wait='0' atinit='zpcompinit'
 # zinit ice wait atload='_history_substring_search_config'
 
 
-# ---------------------------------------------------------
+# --------------------------------------------------------------------- #
+#								加载插件
+# --------------------------------------------------------------------- #
 
 # 输入历史搜索
 zinit load zdharma-continuum/history-search-multi-word
@@ -93,10 +102,19 @@ zinit light paulirish/git-open
 zinit light saravanabalagi/zsh-plugin-condaenv
 
 
+# --------------------------------------------------------------------- #
+#								OMG Theme
+# --------------------------------------------------------------------- #
 
-# -----------------------------------------
-#					Themes
-# -----------------------------------------
+# zinit snippet OMZT::ys
+# zinit snippet OMZT::muse
+# zinit snippet OMZT::robbyrussell
+# zinit snippet OMZT::steeef
+# zinit snippet OMZT::af-magic
+
+# --------------------------------------------------------------------- #
+#								Themes
+# --------------------------------------------------------------------- #
 
 # modesty
 # 可以显示 conda的环境信息
@@ -150,14 +168,6 @@ zinit light saravanabalagi/zsh-theme-modesty
 # zinit light jackharrisonsherlock/common
 
 
-# -------------------------------------------
-#				OMG Theme
-# -------------------------------------------
-# zinit snippet OMZT::ys
-# zinit snippet OMZT::muse
-# zinit snippet OMZT::robbyrussell
-# zinit snippet OMZT::steeef
-# zinit snippet OMZT::af-magic
 
 
 # OMG EXtern Themes
@@ -207,9 +217,9 @@ zinit light saravanabalagi/zsh-theme-modesty
 # autoload -Uz promptinit && promptinit
 
 
-# ---------------------------------------------------
-#					插件配置
-# ---------------------------------------------------
+# --------------------------------------------------------------------- #
+#								插件配置
+# --------------------------------------------------------------------- #
 
 # history 插件配置
 # zstyle :plugin:history-search-multi-word reset-prompt-protect 1
@@ -222,7 +232,7 @@ zstyle ":plugin:history-search-multi-word" active "bg=blue"
 
 
 
-# ---------------------------------------------------------------------
+# --------------------------------------------------------------------- #
 
 
 # rust 源
