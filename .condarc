@@ -5,3 +5,6 @@ channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
 channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 show_channel_urls: true
+
+# 隐藏显示当前conda环境
+changeps1: false
