@@ -6,7 +6,7 @@ export NODE_PATH="$HOME/nodejs/node_global/bin"
 export PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
 # ecletron
-export ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+#export ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 
 
 # golang
@@ -43,15 +43,16 @@ export PATH=$PATH:$(go env GOPATH)/bin
 #
 #rbenv
 
-if [ -n "$BASH_VERSION" ]; then
-  eval "$(rbenv init - bash)"
-elif [ -n "$ZSH_VERSION" ]; then
-  eval "$(rbenv init - zsh)"
-fi
+#if [ -n "$BASH_VERSION" ]; then
+#  eval "$(rbenv init - bash)"
+#elif [ -n "$ZSH_VERSION" ]; then
+#  eval "$(rbenv init - zsh)"
+#fi
+
 # 设置ruby镜像源
 #export RUBY_BUILD_MIRROR_URL=https://cache.ruby-china.com
 # 设置下载工具
-export RUBY_BUILD_HTTP_CLIENT=wget
+#export RUBY_BUILD_HTTP_CLIENT=wget
 
 
 
@@ -67,15 +68,15 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 # Rust
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 
 # VSCode
-export PATH=$PATH:/opt/VSCode/bin
+#export PATH=$PATH:/opt/VSCode/bin
 
 # Sublime
 
 # docker sh
-source ~/docker_sh/docker_info.sh
+#source ~/docker_sh/docker_info.sh
 
 
