@@ -1,7 +1,7 @@
 
 
 if [[ $XDG_SESSION_TYPE == "x11" ]];then
-	[[ -f ~/.local_profile ]] && . ~/.local_profile
+	[[ -f $HOME/.local_profile ]] && . $HOME/.local_profile
 
 	export GTK_IM_MODULE=ibus
 	export XMODIFIERS=@im=ibus
