@@ -22,9 +22,9 @@ alias lg='exa -a --long --all --header --group --level=2 --icons --time-style=lo
 # --------------------------------------------------------------------- #
 
 # 导入环境变量配置
-if [[ $XDG_SESSION_TYPE == "wayland" ]] && [[ -f $HOME/.local_profile ]];then
+if [[ $XDG_SESSION_TYPE == "wayland" ]] && [[ -f $HOME/.local_sh_profile ]];then
 	# source ~/.profile
-	source ~/.local_profile
+	source ~/.local_sh_profile
 fi
 
 # --------------------------------------------------------------------- #
