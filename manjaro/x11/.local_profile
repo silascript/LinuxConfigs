@@ -32,6 +32,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Rust
+. "$HOME/.cargo/env"
+# rust 源
+# 清华
+export RUSTUP_UPDATE_ROOT="https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup"
+export RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
+# 字节
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 # ruby
 #
@@ -54,7 +63,8 @@ unset __conda_setup
 # 设置下载工具
 #export RUBY_BUILD_HTTP_CLIENT=wget
 
-
+# frum
+eval "$(frum init)"
 
 
 # SDKMan
@@ -67,15 +77,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # export CLASSPATH="."
 
 
-# Rust
-. "$HOME/.cargo/env"
-# rust 源
-# 清华
-export RUSTUP_UPDATE_ROOT="https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup"
-export RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
-# 字节
-export RUSTUP_DIST_SERVER="https://rsproxy.cn"
-export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 
 # VSCode

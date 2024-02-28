@@ -21,6 +21,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Rust
+. "$HOME/.cargo/env"
+# rust 源
+# 清华
+export RUSTUP_UPDATE_ROOT="https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup"
+export RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
+# 字节
+export RUSTUP_DIST_SERVER="https://rsproxy.cn"
+export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 # ruby
 #
@@ -30,18 +39,22 @@ unset __conda_setup
  # source /usr/share/chruby/auto.sh
 #fi
 #
-#rbenv
 
+#rbenv
 #if [ -n "$BASH_VERSION" ]; then
 #  eval "$(rbenv init - bash)"
 #elif [ -n "$ZSH_VERSION" ]; then
 #  eval "$(rbenv init - zsh)"
 #fi
 
-# 设置ruby镜像源
+# 设置ruby-build镜像源
 #export RUBY_BUILD_MIRROR_URL=https://cache.ruby-china.com
 # 设置下载工具
 #export RUBY_BUILD_HTTP_CLIENT=wget
+
+# frum
+eval "$(frum init)"
+
 
 
 
@@ -56,15 +69,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # export CLASSPATH="."
 
 
-# Rust
-. "$HOME/.cargo/env"
-# rust 源
-# 清华
-export RUSTUP_UPDATE_ROOT="https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup"
-export RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
-# 字节
-export RUSTUP_DIST_SERVER="https://rsproxy.cn"
-export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 
 # docker sh
