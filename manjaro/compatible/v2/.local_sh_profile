@@ -47,7 +47,8 @@ NODE_PATH=$HOME/nodejs/node_global/bin
 PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
 # ecletron
-ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+# 此变量应在.npmrc文件中配置
+# ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
 
 # ------------------------------------------------------------------------------ #
 
