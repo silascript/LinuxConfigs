@@ -3,7 +3,6 @@
 #			用于shell的环境变量配置
 # ------------------------------------------- #
 
-
 # conda
 # export PATH=$PATH:"$HOME/miniconda3/bin"
 # >>> conda initialize >>>
@@ -21,6 +20,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# ------------------------------------------------------------------------------ #
+
+# golang
+GOROOT=/opt/golang
+PATH=$PATH:$GOROOT/bin
+PATH=$PATH:$(go env GOPATH)/bin
+
+# ------------------------------------------------------------------------------ #
+
 # Rust
 . "$HOME/.cargo/env"
 # rust 源
@@ -30,6 +38,30 @@ export RUSTUP_DIST_SERVER="https://mirrors.tuna.tsinghua.edu.cn/rustup"
 # 字节
 export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
+
+# ------------------------------------------------------------------------------ #
+
+# nodejs
+NODE_HOME=/opt/NodeJS/node-v20
+NODE_PATH=$HOME/nodejs/node_global/bin
+PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
+
+# ecletron
+ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+
+# ------------------------------------------------------------------------------ #
+
+# Java
+# SDKMan
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
+# export CLASSPATH="."
+
+
+# ------------------------------------------------------------------------------ #
 
 # ruby
 #
@@ -56,20 +88,13 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 eval "$(frum init)"
 
 
+# ------------------------------------------------------------------------------ #
 
+# vscode
+# PATH=${PATH}:/opt/VSCode/bin
+PATH=$PATH:/opt/visual-studio-code/bin
 
-
-# SDKMan
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Java
-#export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
-# export CLASSPATH="."
-
-
-
+# ------------------------------------------------------------------------------ #
 
 # docker sh
 #source ~/docker_sh/docker_info.sh

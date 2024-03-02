@@ -21,11 +21,6 @@ alias lg='exa -a --long --all --header --group --level=2 --icons --time-style=lo
 
 # --------------------------------------------------------------------- #
 
-# 导入环境变量配置
-if [[ $XDG_SESSION_TYPE == "wayland" ]] && [[ -f $HOME/.local_sh_profile ]];then
-	# source ~/.profile
-	source ~/.local_sh_profile
-fi
 
 # --------------------------------------------------------------------- #
 #								 zinit
@@ -298,5 +293,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 
 
 # --------------------------------------------------------------------- #
+
 
 
