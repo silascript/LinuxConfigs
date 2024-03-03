@@ -1,4 +1,7 @@
 # docker 查询
+# 调用这函数可以传一个参数也可以传两个参数
+# 第一个参数是要查询image的字符串
+# 第二个参数是tag包含的字符串，可以过滤tag数据，属于可选参数
 function docker_queryimagetag() {
 
 	if [[ $# -eq 0 ]]; then
@@ -23,10 +26,9 @@ function docker_queryimagetag() {
 
 	# local tags=$(curl http://hub-mirror.c.163.com/v2/library/${image}/tags/list | jq -r '.tags[]')
 
-
 	# 判断是参数是否大于2
 	# 第2个参数是tag查询的字符串
-	if [[ $# -gt 1 ]];then
+	if [[ $# -gt 1 ]]; then
 
 		local tags=$(curl http://hub-mirror.c.163.com/v2/library/${image}/tags/list | jq --arg tstr $tagstr -r '.tags[]| select(contains($tstr))')
 	else
