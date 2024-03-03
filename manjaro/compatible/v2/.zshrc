@@ -294,5 +294,17 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 
 # --------------------------------------------------------------------- #
 
+# docker 相关脚本
+# 查看docker IP及端口占用情况的脚本
+if [[ -f $HOME/docker_sh/docker_info.sh ]];then
+	
+	source $HOME/docker_sh/docker_info.sh 
+fi
+
+# 使用163 docker hub镜像根据tag查询脚本
+if [[ -f $HOME/docker_sh/dockertags_163.sh ]];then
+	
+	source $HOME/docker_sh/dockertags_163.sh 
+fi
 
 
