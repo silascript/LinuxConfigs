@@ -7,20 +7,25 @@
 # export PATH=$PATH:"$HOME/miniconda3/bin"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/silascript/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-	eval "$__conda_setup"
-else
-	if [ -f "/home/silascript/miniconda3/etc/profile.d/conda.sh" ]; then
-		. "/home/silascript/miniconda3/etc/profile.d/conda.sh"
-	else
-		export PATH="/home/silascript/miniconda3/bin:$PATH"
-	fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/silascript/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+	# eval "$__conda_setup"
+# else
+	# if [ -f "/home/silascript/miniconda3/etc/profile.d/conda.sh" ]; then
+		# . "/home/silascript/miniconda3/etc/profile.d/conda.sh"
+	# else
+		# export PATH="/home/silascript/miniconda3/bin:$PATH"
+	# fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
 # ------------------------------------------------------------------------------ #
+
+# golang
+GOROOT=/opt/golang
+PATH=$PATH:$GOROOT/bin
+PATH=$PATH:$(go env GOPATH)/bin
 
 # ------------------------------------------------------------------------------ #
 
@@ -42,8 +47,8 @@ NODE_PATH=$HOME/nodejs/node_global/bin
 PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
 # ecletron
-# 此变量应在.npmrc中配置
-# ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
+# ecletron 的代理不需要在这里配，应在.npmrc文件中配
+# ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 
 # ------------------------------------------------------------------------------ #
 
@@ -86,10 +91,13 @@ eval "$(frum init)"
 
 # ------------------------------------------------------------------------------ #
 
+# vscode
+# PATH=${PATH}:/opt/VSCode/bin
+PATH=$PATH:/opt/visual-studio-code/bin
 
 # ------------------------------------------------------------------------------ #
 
 # docker sh
-#source ~/docker_sh/docker_info.sh
+# source ~/docker_sh/docker_info.sh
 
 

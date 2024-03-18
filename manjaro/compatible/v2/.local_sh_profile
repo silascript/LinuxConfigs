@@ -47,8 +47,8 @@ NODE_PATH=$HOME/nodejs/node_global/bin
 PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
 # ecletron
+# ecletron 的代理不需要在这里配，应在.npmrc文件中配
 # ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
-# ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
 
 # ------------------------------------------------------------------------------ #
 

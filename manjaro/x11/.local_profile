@@ -6,7 +6,8 @@ export NODE_PATH="$HOME/nodejs/node_global/bin"
 export PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
 # ecletron
-#export ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
+# 不需要在这里配ecletron的代理，应在.npmrc文件中配
+# export ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
 
 
 # golang
