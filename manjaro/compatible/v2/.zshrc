@@ -19,6 +19,10 @@ alias ll='exa -a --long --all --header --group --icons --time-style=long-iso'
 alias lg='exa -a --long --all --header --group --level=2 --icons --time-style=long-iso --git'
 # alias ll='exa -a --long --header --group --level=2 --icons'
 
+# nvim 不同的配置
+alias tiny-nvim="NVIM_APPNAME=tiny-nvim nvim"
+
+
 # --------------------------------------------------------------------- #
 
 
