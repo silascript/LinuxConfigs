@@ -55,8 +55,8 @@ PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 # Java
 # SDKMan
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 #export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
 # export CLASSPATH="."
@@ -99,5 +99,9 @@ PATH=$PATH:/opt/visual-studio-code/bin
 
 # docker sh
 # source ~/docker_sh/docker_info.sh
+
+# ------------------------------------------------------------------------------ #
+
+
 
 

@@ -296,7 +296,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 
 
 
-# --------------------------------------------------------------------- #
+# --------------------------配置在.zprofile不生效的环境变量----------------------------- #
 
 # conda
 # export PATH=$PATH:"$HOME/miniconda3/bin"
@@ -315,6 +315,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Java
+# SDKMan
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
 
