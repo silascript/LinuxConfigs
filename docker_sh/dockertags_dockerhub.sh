@@ -69,7 +69,8 @@ function getNextValue() {
 
 }
 
-# 获取该镜像所有的Tag数量
+# 获取指定镜像所有的Tag数量
+# 参数是镜像查询 url
 function getTagsCount() {
 
 	# 查询url
@@ -79,6 +80,51 @@ function getTagsCount() {
 
 	# 返回tag数
 	echo $tagCount
+
+}
+
+# 获取指定镜像所有的Tag的数量
+# 参数为镜像名称
+function getTagsCountByRepoName() {
+
+	local repoName=$1
+
+	# 构建镜像Tag查询url
+	local urlStr="https://registry.hub.docker.com/v2/namespaces/library/repositories/${repoName}/tags/"
+
+	# 调用getTagsCount函数
+	local tagCount=$(getTagsCount $urlStr)
+
+	# 返回tag数量
+	echo $tagCount
+
+}
+
+# 设计单页Tag数量
+# 用于分页查询page_size参数
+# 参数为Tag总数 可以通过 getTagsCountByRepoName 函数获取
+function getPageSize() {
+
+	# tag 总数
+	local tagCount=$1
+
+	# 单页数量
+	local pageSize=10
+
+	if [ $tagCount -le 100 ]; then
+		pageSize=$tagCount
+	elif [[ $tagCount -gt 100 ]] && [[ $tagCount -le 200 ]]; then
+		pageSize=$(($tagCount / 2))
+	elif [[ $tagCount -gt 200 ]] && [[ $tagCount -le 500 ]]; then
+		pageSize=$(($tagCount / 3))
+	elif [[ $tagCount -gt 500 ]] && [[ $tagCount -le 800 ]]; then
+		pageSize=$(($tagCount / 5))
+	else
+		pageSize=$(($tagCount / 8))
+	fi
+
+	# 返回单页数量
+	echo $pageSize
 
 }
 
@@ -131,6 +177,8 @@ function queryAllTagsByRepoNameC() {
 		# 追加Tag元素进数组
 		allTags+=(${nextTags[@]})
 
+		# 进度条
+
 		# 获取下一页中的next值
 		nextV=$(getNextValue $current_url)
 
@@ -147,41 +195,17 @@ function queryAllTagsByRepoName() {
 	# 其实就是镜像的名称
 	local repoName=$1
 
-	# 当前页的Tag
-	local currentPageTags=$(curl -s "https://registry.hub.docker.com/v2/namespaces/library/repositories/${repoName}/tags/" | jq -r '.results[].name')
-
 	# 将当前页面获取到的Tag添加进所有Tag数组
-	local allTags=$currentPageTags
+	# local allTags=$currentPageTags
 
-	# 获取 next 值
-	local nextV=$(getNextValue "https://registry.hub.docker.com/v2/namespaces/library/repositories/${repoName}/tags/")
+	# 获取镜像Tag总数
+	local tagCount=$(getTagsCountByRepoName $repoName)
 
-	# echo $nextV
+	# 根据Tag总数计算单页tag数量
+	local pageSize=$(getPageSize $tagCount)
 
-	# 当前页面Tag
-	# echo $currentPageTags
-	# echo ${currentPageTags[@]}
-	# next值
-	# echo $nextV
-
-	# 遍历获取下一页的Tag
-	while [[ $nextV != "null" ]]; do
-
-		# 当前url
-		local current_url=$nextV
-
-		echo $current_url
-
-		# 获取下一页Tag
-		local nextTags=$(queryTagsByRepoNameOnePage $current_url)
-
-		# 追加Tag元素进数组
-		allTags+=(${nextTags[@]})
-
-		# 获取下一页中的next值
-		nextV=$(getNextValue $current_url)
-
-	done
+	# 根据镜像名查询Tag，指定查询页单页数量
+	local allTags=$(queryAllTagsByRepoNameC $repoName $pageSize)
 
 	# 返回Tag数组
 	echo ${allTags[@]}
@@ -200,7 +224,7 @@ function queryTagsByRepoNameOnePage() {
 	echo $tags
 }
 
-# ------------------------------测试------------------------------
+# ------------------------------------------测试------------------------------------------
 
 # docker_queryimagetag_dockerhub $1
 
@@ -221,9 +245,19 @@ function queryTagsByRepoNameOnePage() {
 # 	echo $t_nextv
 # fi
 
-# 测试根据repostory名称获取所有Tag函数
-# queryAllTagsByRepoName mysql
-# queryAllTagsByRepoName python
-
 # 测试 queryAllTagsByRepoNameC 函数
-queryAllTagsByRepoNameC mysql 100
+# queryAllTagsByRepoNameC mysql 100
+
+# 测试获取tag数量函数 getTagsCount
+# getTagsCount "https://registry.hub.docker.com/v2/namespaces/library/repositories/mysql/tags/"
+
+# 测试指定镜像获取tag数量函数 getTagsCountByRepoName
+# getTagsCountByRepoName "mysql"
+# getTagsCountByRepoName python
+
+# 测试设置单页数量函数 getPageSize
+# getPageSize 480
+
+# 测试根据repostory名称获取所有Tag的函数
+queryAllTagsByRepoName mysql
+# queryAllTagsByRepoName python
