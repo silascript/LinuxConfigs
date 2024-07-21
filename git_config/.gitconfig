@@ -11,11 +11,13 @@
 #	insteadOf = https://github.com/
 # [url "https://hub.njuu.cf/"]
 	# insteadOf = https://github.com/
-#[url "https://github.hscsec.cn/"]
-#	insteadOf = https://github.com/
-[url "https://bgithub.xyz/"]
-	insteadOf = https://github.com/
+# [url "https://github.hscsec.cn/"]
+# 	insteadOf = https://github.com/
+# [url "https://bgithub.xyz/"]
+# 	insteadOf = https://github.com/
 # [url "https://ggithub.xyz/"]
+	# insteadOf = https://github.com/
+# [url "https://git.homegu.com/"]
 	# insteadOf = https://github.com/
 [credential "https://github.com"]
 	helper = 
@@ -56,3 +58,5 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 
+[init]
+	defaultBranch = main
