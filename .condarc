@@ -1,14 +1,19 @@
 channels:
- # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
- # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
- # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
- # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
-  - https://mirrors.pku.edu.cn/anaconda/pkgs/main
-  - https://mirrors.pku.edu.cn/anaconda/cloud/conda-forge
-  - https://mirrors.pku.edu.cn/anaconda/pkgs/r
-# channel_alias: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-channel_alias: https://mirrors.pku.edu.cn/anaconda/cloud
+  - defaults
 show_channel_urls: true
-
+default_channels:
+  # 清华
+  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  # 中科大
+  # - https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+  # - https://mirrors.ustc.edu.cn/anaconda/pkgs/r
+  # 北大
+  - https://mirrors.pku.edu.cn/anaconda/pkgs/main
+  - https://mirrors.pku.edu.cn/anaconda/pkgs/r
+custom_channels:
+  # conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  # conda-forge: https://mirrors.ustc.edu.cn/anaconda/cloud
+  conda-forge: https://mirrors.pku.edu.cn/anaconda/cloud
 # 隐藏显示当前conda环境
 changeps1: false
