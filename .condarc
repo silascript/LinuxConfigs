@@ -1,9 +1,14 @@
 channels:
+  # 清华
+  # - https://mirrors.pku.edu.cn/anaconda/pkgs/main
+  # - https://mirrors.pku.edu.cn/anaconda/pkgs/r
+  # 北大
   - https://mirrors.pku.edu.cn/anaconda/pkgs/main
   - https://mirrors.pku.edu.cn/anaconda/pkgs/r
   - conda-forge
-show_channel_urls: true
 custom_channels:
+  # conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   conda-forge: https://mirrors.pku.edu.cn/anaconda/cloud
+show_channel_urls: true
 # 隐藏显示当前conda环境
 changeps1: false
