@@ -42,7 +42,9 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 # ------------------------------------------------------------------------------ #
 
 # nodejs
-NODE_HOME=/opt/NodeJS/node-v20
+# 根据不同版本自行修改路径
+# NODE_HOME=/opt/NodeJS/node-v20
+NODE_HOME=/opt/NodeJS/node-v22
 NODE_PATH=$HOME/nodejs/node_global/bin
 PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 

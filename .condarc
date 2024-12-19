@@ -1,11 +1,13 @@
 channels:
-  # 清华
-  # - https://mirrors.pku.edu.cn/anaconda/pkgs/main
-  # - https://mirrors.pku.edu.cn/anaconda/pkgs/r
+  - defaults
+  - conda-forge
+default_channels:
   # 北大
   - https://mirrors.pku.edu.cn/anaconda/pkgs/main
   - https://mirrors.pku.edu.cn/anaconda/pkgs/r
-  - conda-forge
+  # 清华
+  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
 custom_channels:
   # conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   conda-forge: https://mirrors.pku.edu.cn/anaconda/cloud
