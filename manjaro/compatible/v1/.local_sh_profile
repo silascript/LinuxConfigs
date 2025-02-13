@@ -103,3 +103,8 @@ PATH=$PATH:/opt/visual-studio-code/bin
 # source ~/docker_sh/docker_info.sh
 
 
+# IDEA crack shell
+# 如果不用 IDEA的可以注释
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+
