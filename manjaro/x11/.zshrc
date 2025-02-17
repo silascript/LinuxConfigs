@@ -300,3 +300,4 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # --------------------------------------------------------------------- #
 
 
+
