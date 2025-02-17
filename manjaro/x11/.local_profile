@@ -1,13 +1,21 @@
 
 
 # NodeJS
-export NODE_HOME=/opt/NodeJS/node-v20
-export NODE_PATH="$HOME/nodejs/node_global/bin"
-export PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
+
+# 根据不同版本自行修改路径
+# NODE_HOME=/opt/NodeJS/node-v20
+# NODE_HOME=/opt/NodeJS/node-v22
+NODE_PATH=$HOME/nodejs/node_global/bin
+# 使用fnm等版本管理工具就不用将nodejs安装目录放进PATH路径中了
+PATH=$PATH:$NODE_PATH
+# PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
+
+# 使用fnm对Node进行版本管理
+eval "$(fnm env --use-on-cd)"
 
 # ecletron
-# 不需要在这里配ecletron的代理，应在.npmrc文件中配
-# export ELECTRON_MIRROR=https://npmmirror.com/mirrors/electron/
+# ecletron 的代理不需要在这里配，应在.npmrc文件中配
+# ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 
 
 # golang

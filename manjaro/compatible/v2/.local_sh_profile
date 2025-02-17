@@ -44,9 +44,14 @@ export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 # nodejs
 # 根据不同版本自行修改路径
 # NODE_HOME=/opt/NodeJS/node-v20
-NODE_HOME=/opt/NodeJS/node-v22
+# NODE_HOME=/opt/NodeJS/node-v22
 NODE_PATH=$HOME/nodejs/node_global/bin
-PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
+# 使用fnm等版本管理工具就不用将nodejs安装目录放进PATH路径中了
+PATH=$PATH:$NODE_PATH
+# PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
+
+# 使用fnm对Node进行版本管理
+eval "$(fnm env --use-on-cd)"
 
 # ecletron
 # ecletron 的代理不需要在这里配，应在.npmrc文件中配
@@ -107,7 +112,6 @@ PATH=$PATH:/opt/visual-studio-code/bin
 # IDEA crack shell
 # 如果不用 IDEA的可以注释
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
-
 
 
 
