@@ -2,16 +2,20 @@
 
 # NodeJS
 
+# 使用fnm对Node进行版本管理
+eval "$(fnm env --use-on-cd)"
+
+# nodejs
 # 根据不同版本自行修改路径
 # NODE_HOME=/opt/NodeJS/node-v20
 # NODE_HOME=/opt/NodeJS/node-v22
+
+# 全局模块目录
 NODE_PATH=$HOME/nodejs/node_global/bin
 # 使用fnm等版本管理工具就不用将nodejs安装目录放进PATH路径中了
-PATH=$PATH:$NODE_PATH
+# 防止node安装目录中的npm放在PATH前面，所以将NODE_PATH加在原有PATH之前
+PATH=$NODE_PATH:$PATH
 # PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
-
-# 使用fnm对Node进行版本管理
-eval "$(fnm env --use-on-cd)"
 
 # ecletron
 # ecletron 的代理不需要在这里配，应在.npmrc文件中配
