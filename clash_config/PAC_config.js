@@ -24,6 +24,7 @@ function FindProxyForURL(url, host) {
       "www.lingshulian.com",
       "www.deepseek.com",
       "linux.do",
+	  "bangnixia.com"
       // "update.code.visualstudio.com"
       
       //"10.11.12.13",
