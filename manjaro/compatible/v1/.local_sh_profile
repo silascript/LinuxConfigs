@@ -23,9 +23,32 @@
 # ------------------------------------------------------------------------------ #
 
 # golang
-GOROOT=/opt/golang
-PATH=$PATH:$GOROOT/bin
-PATH=$PATH:$(go env GOPATH)/bin
+# GOROOT=/opt/golang
+# PATH=$PATH:$GOROOT/bin
+# PATH=$PATH:$(go env GOPATH)/bin
+
+# 使用goenv来管理golang
+# GOENV_ROOT="$HOME/.goenv"
+# PATH=$PATH:$GOENV_ROOT
+# eval "$(goenv init -)"
+# GOROOT=$(go env GOROOT)
+# PATH=$PATH:$GOROOT/bin
+# PATH=$PATH:$(go env GOPATH)/bin
+
+# 使用g来管理golang
+# [ -s "${HOME}/.g/env" ] && \. "${HOME}/.g/env"  # g shell setup
+
+GOROOT="${HOME}/.g/go"
+# 如果GOPATH变量为空则设置为用户根目录下的go目录
+[ -z "$GOPATH" ] && export GOPATH="${HOME}/go"
+PATH="$PATH:${HOME}/.g/bin:${GOROOT}/bin:${GOPATH}/bin"
+# 镜像配置 export 不能省
+# 官方镜像
+export G_MIRROR=https://golang.google.cn/dl/
+# 阿里云镜像
+# export G_MIRROR=https://mirrors.aliyun.com/golang/
+
+
 
 # ------------------------------------------------------------------------------ #
 
@@ -53,13 +76,24 @@ eval "$(fnm env --use-on-cd)"
 NODE_PATH=$HOME/nodejs/node_global/bin
 # 使用fnm等版本管理工具就不用将nodejs安装目录放进PATH路径中了
 # 防止node安装目录中的npm放在PATH前面，所以将NODE_PATH加在原有PATH之前
+# export PATH=$NODE_PATH:$PATH
 PATH=$NODE_PATH:$PATH
 # PATH=$PATH:$NODE_PATH:$NODE_HOME/bin
 
+# 配置node和npm的安装包镜像
+# 腾讯云镜像
+# export FNM_NODE_DIST_MIRROR=https://mirrors.cloud.tencent.com/nodejs-release/
+# 这个实际应该在.npmrc中registry项配的
+# NPM_CONFIG_REGISTRY=https://mirrors.cloud.tencent.com/npm/
+# 阿里云镜像
+FNM_NODE_DIST_MIRROR=https://npmmirror.com/mirrors/node/
+# 这个实际应该在.npmrc中registry项配的
+# NPM_CONFIG_REGISTRY=https://npmmirror.com/mirrors/npm/
 
 # ecletron
 # ecletron 的代理不需要在这里配，应在.npmrc文件中配
 # ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
+
 
 # ------------------------------------------------------------------------------ #
 

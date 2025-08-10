@@ -67,7 +67,7 @@ zinit light-mode for \
 # 加载oh-my-zsh 插件
 # git lib
 zinit snippet OMZL::git.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
+# zinit snippet OMZ::plugins/git/git.plugin.zsh
 # oh-my-zsh 补全插件 忽略大小写、高亮候选项
 zinit snippet OMZ::lib/completion.zsh
 
@@ -365,3 +365,5 @@ fi
 # 	source $HOME/docker_sh/dockertags_dockerhub.sh
 # fi
 # ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+
+

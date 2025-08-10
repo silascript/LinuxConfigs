@@ -67,7 +67,7 @@ zinit light-mode for \
 # 加载oh-my-zsh 插件
 # git lib
 zinit snippet OMZL::git.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
+# zinit snippet OMZ::plugins/git/git.plugin.zsh
 # oh-my-zsh 补全插件 忽略大小写、高亮候选项
 zinit snippet OMZ::lib/completion.zsh
 
