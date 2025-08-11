@@ -19,13 +19,13 @@ alias ll='exa -a --long --all --header --group --icons --time-style=long-iso'
 alias lg='exa -a --long --all --header --group --level=2 --icons --time-style=long-iso --git'
 # alias ll='exa -a --long --header --group --level=2 --icons'
 
+# nvim 不同的配置
+alias tiny-nvim="NVIM_APPNAME=tiny-nvim nvim"
+alias astro-nvim="NVIM_APPNAME=astro-nvim nvim"
+
+
 # --------------------------------------------------------------------- #
 
-# 导入环境变量配置
-# if [[ $XDG_SESSION_TYPE == "wayland" ]] && [[ -f $HOME/.local_sh_profile ]];then
-	# # source ~/.profile
-	# source ~/.local_sh_profile
-# fi
 
 # --------------------------------------------------------------------- #
 #								 zinit
@@ -73,11 +73,14 @@ zinit snippet OMZ::lib/completion.zsh
 
 # 跟theme与样式相关
 # 必须加载，不然OMZ的theme不生效
+# 这个插件又依赖git插件
 zinit snippet OMZ::lib/theme-and-appearance.zsh
 
 # zinit load 'zsh-users/zsh-history-substring-search'
 # zinit ice wait atload='_history_substring_search_config'
 
+
+zstyle ':omz:alpha:lib:git' async-prompt no
 
 # --------------------------------------------------------------------- #
 #                             加载插件
@@ -99,7 +102,7 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 
 # autosuggestions
 # zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
-zinit ice lucid wait="0" 
+zinit ice lucid wait="0"
 zinit light zsh-users/zsh-autosuggestions
 
 # 输入历史搜索
@@ -109,7 +112,17 @@ zinit load zdharma-continuum/history-search-multi-word
 zinit light ael-code/zsh-colored-man-pages
 
 # git相关
-zinit light paulirish/git-open
+# zinit light paulirish/git-open
+
+# 这个用来替代oh-my-zsh版本的git插件
+# zinit light davidde/git
+
+# zinit light rcruzper/zsh-git-plugin
+
+# zinit light tevren/gitfast-zsh-plugin
+
+# zinit light LFabre/zsh-git-prompt-enhanced
+
 
 # vi-mod
 # zinit ice depth=1
@@ -117,6 +130,8 @@ zinit light paulirish/git-open
 
 # 提供 conda的环境信息
 # zinit light saravanabalagi/zsh-plugin-condaenv
+
+# zinit light KellieOwczarczak/conda.plugin.zsh
 
 
 # --------------------------------------------------------------------- #
@@ -143,8 +158,12 @@ zinit light paulirish/git-open
 zinit ice pick"myys.zsh-theme"
 zinit light zhiweichen0012/myys.zsh-theme
 
+# ys 修改 显示conda环境
+# zinit light GeeKaven/yu-ys.zsh-theme 
+
+
 # silver
-# zinit light reujab/silver
+ # zinit light reujab/silver
 
 # slimline
 # zinit light mengelbrecht/slimline
@@ -160,7 +179,7 @@ zinit light zhiweichen0012/myys.zsh-theme
 # zinit light TooSchoolForCool/darksoku-zsh-theme
 
 # ys改款
-#zinit light oskarkrawczyk/honukai-iterm-zsh
+# zinit light oskarkrawczyk/honukai-iterm-zsh
 
 # ys改款
 # zinit light aprilnops/zsh-theme
@@ -225,10 +244,10 @@ zinit light zhiweichen0012/myys.zsh-theme
 
 
 # alien theme
-# zinit light eendroroy/alien 
+# zinit light eendroroy/alien
 # alien theme 设置
 # export ALIEN_THEME="gruvbox"
-# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S 
+# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S
 # export ALIEN_SECTIONS_LEFT=(
   # exit
   # user
@@ -252,6 +271,9 @@ zinit light zhiweichen0012/myys.zsh-theme
 
 # autoload -Uz promptinit && promptinit
 
+
+# clarity
+# zinit light rkoder/clarity.zsh
 
 # --------------------------------------------------------------------- #
 #                              插件配置
@@ -297,6 +319,55 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 
 
 
+# --------------------------配置在.zprofile不生效的环境变量----------------------------- #
+
+# conda
+# export PATH=$PATH:"$HOME/miniconda3/bin"
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/silascript/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+	eval "$__conda_setup"
+else
+	if [ -f "/home/silascript/miniconda3/etc/profile.d/conda.sh" ]; then
+		. "/home/silascript/miniconda3/etc/profile.d/conda.sh"
+	else
+		export PATH="/home/silascript/miniconda3/bin:$PATH"
+	fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Java
+# SDKMan
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+
 # --------------------------------------------------------------------- #
+
+
+
+# docker 相关脚本
+# 查看docker IP及端口占用情况的脚本
+if [[ -f $HOME/docker_sh/docker_info.sh ]];then
+
+	source $HOME/docker_sh/docker_info.sh
+fi
+
+# 使用163 docker hub镜像根据tag查询脚本
+if [[ -f $HOME/docker_sh/dockertags_163.sh ]];then
+
+	source $HOME/docker_sh/dockertags_163.sh
+fi
+# 使用 dockerhub api 查询tag
+# if [[ -f $HOME/docker_sh/dockertags_dockerhub.sh ]];then
+#
+# 	source $HOME/docker_sh/dockertags_dockerhub.sh
+# fi
+# ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
 

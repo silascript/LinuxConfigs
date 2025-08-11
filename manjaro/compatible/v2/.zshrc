@@ -158,6 +158,10 @@ zinit light ael-code/zsh-colored-man-pages
 zinit ice pick"myys.zsh-theme"
 zinit light zhiweichen0012/myys.zsh-theme
 
+# ys 修改 显示conda环境
+# zinit light GeeKaven/yu-ys.zsh-theme 
+
+
 # silver
  # zinit light reujab/silver
 
