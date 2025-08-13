@@ -84,6 +84,12 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# UV
+
+UV_PYTHON_INSTALL_MIRROR="https://mirrors.cernet.edu.cn/list/python-build-standalone"
+
+
+
 # -------------------------------------------------------------
 
 # Rust
