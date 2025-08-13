@@ -67,7 +67,7 @@ zinit light-mode for \
 # 加载oh-my-zsh 插件
 # git lib
 zinit snippet OMZL::git.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
+# zinit snippet OMZ::plugins/git/git.plugin.zsh
 # oh-my-zsh 补全插件 忽略大小写、高亮候选项
 zinit snippet OMZ::lib/completion.zsh
 
@@ -141,7 +141,8 @@ zinit light paulirish/git-open
 
 # ys 修改 显示conda环境
 zinit ice pick"myys.zsh-theme"
-zinit light zhiweichen0012/myys.zsh-theme
+# zinit light zhiweichen0012/myys.zsh-theme
+zinit light silascript/myys.zsh-theme
 
 # silver
 # zinit light reujab/silver
