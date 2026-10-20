@@ -2,6 +2,8 @@
 
 # https://github.com/Loyalsoldier/clash-rules
 
+
+
 rule-providers:
   reject:
     type: http
@@ -60,9 +62,10 @@ rule-providers:
     interval: 86400
 
 +rules:
+  # - "DOMAIN-SUFFIX,shields.io,PROXY"
   - "RULE-SET,reject,REJECT"
   - "RULE-SET,direct,DIRECT"
-  - "RULE-SET,tld-not-cn,DIRECT"
+  # - "RULE-SET,tld-not-cn,DIRECT"
   - "RULE-SET,cncidr,DIRECT"
   - "RULE-SET,lancidr,DIRECT"
   - "RULE-SET,private,DIRECT"
