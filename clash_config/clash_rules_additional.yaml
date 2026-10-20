@@ -1,0 +1,10 @@
+# https://clashparty.org/docs/guide/override/yaml
+
+
+# 查缺补漏，添加部分规则集中没有的直连域名
+
++rules:
+  - "DOMAIN-KEYWORD,langou123,DIRECT"
+  - "DOMAIN-KEYWORD,paragames233,DIRECT"
+  - "DOMAIN,wofun.me,DIRECT"
+  - "DOMAIN,jyut.net,DIRECT"
