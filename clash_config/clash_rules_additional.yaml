@@ -1,6 +1,5 @@
 # https://clashparty.org/docs/guide/override/yaml
 
-
 # 查缺补漏，添加部分规则集中没有的直连域名
 
 +rules:
