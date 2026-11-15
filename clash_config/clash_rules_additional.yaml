@@ -7,3 +7,10 @@
   - "DOMAIN-KEYWORD,paragames233,DIRECT"
   - "DOMAIN,wofun.me,DIRECT"
   - "DOMAIN,jyut.net,DIRECT"
+  - "DOMAIN,jyutdict.org,DIRECT"
+  - "DOMAIN,zi.tools,DIRECT"
+  - "DOMAIN,ytenx.org,DIRECT"
+  - "DOMAIN,ancientbooks.cn,DIRECT"
+  # ctext.org 中国国内是有镜像
+  - "DOMAIN,ctext.org,DIRECT"
+  
